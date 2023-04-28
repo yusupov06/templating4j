@@ -1,89 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>uz.devops.templating.4.j</groupId>
-	<artifactId>spring-boot-templating-4-j</artifactId>
-	<version>0.0.1</version>
-	<packaging>jar</packaging>
+    <groupId>uz.devops.templating4j</groupId>
+    <artifactId>spring-boot-templating4j</artifactId>
+    <version>0.0.1</version>
+    <packaging>jar</packaging>
 
-	<name>Spring Boot Templating4j Plugin</name>
-	<description>Spring Boot Plugin for Templating4j</description>
+    <name>Spring Boot Templating4j Plugin</name>
+    <description>Spring Boot Plugin for Templating4j</description>
 
-	<organization>
-		<name>devops.uz</name>
-		<url>http://devops.uz</url>
-	</organization>
+    <organization>
+        <name>devops.uz</name>
+        <url>http://devops.uz</url>
+    </organization>
 
-	<developers>
-		<developer>
-			<id>javasparx</id>
-			<name>Javlon Eraliyev</name>
-			<email>javlon@devops.uz</email>
-			<url>https://github.com/javasparx</url>
-			<organization>devops.uz</organization>
-			<organizationUrl>http://www.devops.uz</organizationUrl>
-			<roles>
-				<role>architect</role>
-				<role>developer</role>
-			</roles>
-			<timezone>Asia/Tashkent</timezone>
-			<properties>
-				<picUrl>https://avatars.githubusercontent.com/u/3093410?v=4</picUrl>
-			</properties>
-		</developer>
-	</developers>
+    <developers>
+        <developer>
+            <id>javasparx</id>
+            <name>Javlon Eraliyev</name>
+            <email>javlon@devops.uz</email>
+            <url>https://github.com/javasparx</url>
+            <organization>devops.uz</organization>
+            <organizationUrl>http://www.devops.uz</organizationUrl>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+            <timezone>Asia/Tashkent</timezone>
+            <properties>
+                <picUrl>https://avatars.githubusercontent.com/u/3093410?v=4</picUrl>
+            </properties>
+        </developer>
+    </developers>
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.7</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.6</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
-	<properties>
+    <properties>
         <!--<src.dir>src/main/java</src.dir>-->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>11</java.version>
-	</properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>11</java.version>
+    </properties>
 
-	<dependencies>
+    <dependencies>
         <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok-maven -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.24</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
 
-	</dependencies>
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok-maven -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
 
-	<build>
-		<pluginManagement>
-			<plugins>
-				<!--			<plugin>-->
-				<!--				<groupId>org.springframework.boot</groupId>-->
-				<!--				<artifactId>spring-boot-maven-plugin</artifactId>-->
-				<!--			</plugin>-->
-			</plugins>
-		</pluginManagement>
-	</build>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        </dependency>
+
+
+        <!-- HTML to PDF dependencies -->
+
+        <dependency>
+            <groupId>org.xhtmlrenderer</groupId>
+            <artifactId>flying-saucer-pdf-openpdf</artifactId>
+            <version>9.1.22</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>itextpdf</artifactId>
+            <version>5.5.13.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-tools</artifactId>
+            <version>2.0</version>
+        </dependency>
+
+
+        <!-- use the JAXB Reference Implementation -->
+        <dependency>
+            <groupId>org.docx4j</groupId>
+            <artifactId>docx4j-JAXB-ReferenceImpl</artifactId>
+            <version>11.4.8</version>
+        </dependency>
+        <!-- use the MOXy JAXB implementation -->
+        <dependency>
+            <groupId>org.docx4j</groupId>
+            <artifactId>docx4j-JAXB-MOXy</artifactId>
+            <version>11.4.8</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.docx4j</groupId>
+            <artifactId>docx4j-export-fo</artifactId>
+            <version>11.4.8</version>
+        </dependency>
+
+
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!--			<plugin>-->
+                <!--				<groupId>org.springframework.boot</groupId>-->
+                <!--				<artifactId>spring-boot-maven-plugin</artifactId>-->
+                <!--			</plugin>-->
+            </plugins>
+        </pluginManagement>
+    </build>
 
 
 </project>

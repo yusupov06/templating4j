@@ -1,0 +1,5 @@
+server:
+  port: 8081
+app:
+  pdf-file:
+    root: src/test/resources/pdf/
